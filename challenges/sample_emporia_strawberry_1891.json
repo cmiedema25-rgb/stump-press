@@ -1,0 +1,66 @@
+{
+  "id": "sample_emporia_strawberry_1891",
+  "title": "Image 4 of The Emporia weekly news (Emporia, Kan.), July 3, 1891",
+  "date": "1891-07-03",
+  "lccn": "sn85066616",
+  "page_url": "https://www.loc.gov/resource/sn85066616/1891-07-03/ed-1/?sp=4",
+  "image_url": null,
+  "image_urls": [],
+  "ocr_excerpt": "CH#RCH S0C14L \u2014 Th3 y0#ng p30pl3 0f th3 M3th0d1st 3p1sc0p4l ch#rch s3rv3d 4 str4wb3rry f3st1v4l 1n th3 ch#rch p4rl0rs W3dn3sd4y 3v3n1ng. Pr0c33ds t0 th3 c4rp3t f#nd. ~~~~ //// .... ,, ,, Ill1 ||| 0O0O",
+  "ocr_score": 0.78,
+  "ocr_reasons": [
+    "high_non_alnum",
+    "low_dictionary_rate",
+    "lots_of_weird_chars",
+    "local_crumb_language"
+  ],
+  "ocr_metrics": {},
+  "image_stats": {},
+  "local_crumb_hits": [
+    "church_social",
+    "church"
+  ],
+  "crumb_type": "church_social",
+  "question": "What weekday evening was the strawberry festival held, and what were the proceeds for?",
+  "chaining_clues": [
+    "Find the strawberry-festival notice and name the congregation that hosted it (entity A = Methodist Episcopal Church).",
+    "From A\u2019s notice: where on the premises was the festival served? (entity B = church parlors \u2014 only stated in A\u2019s crumb).",
+    "From the line about the event at B: which weekday evening was it, and which fund received the proceeds? That pair is the answer."
+  ],
+  "hops": [
+    {
+      "step": 1,
+      "clue": "Find the strawberry-festival notice and name the congregation that hosted it (entity A = Methodist Episcopal Church)."
+    },
+    {
+      "step": 2,
+      "clue": "From A\u2019s notice: where on the premises was the festival served? (entity B = church parlors \u2014 only stated in A\u2019s crumb)."
+    },
+    {
+      "step": 3,
+      "clue": "From the line about the event at B: which weekday evening was it, and which fund received the proceeds? That pair is the answer."
+    }
+  ],
+  "answer": "Wednesday evening; carpet fund",
+  "why_stumps_text_model": "Bad OCR hides congregation \u2192 parlors \u2192 weekday/fund chain; minor Emporia social, not a national fact.",
+  "why_model_fails": "",
+  "source": "chronicling-america",
+  "license_note": "Public domain historic newspaper page via Library of Congress Chronicling America / loc.gov. Respect LOC terms of use; do not abuse servers.",
+  "rules": {
+    "unique_local_crumb": true,
+    "prefer": [
+      "society notices",
+      "tea parties",
+      "church socials",
+      "obscure ads",
+      "minor police blotter"
+    ],
+    "avoid": [
+      "famous national events",
+      "well-known historical facts"
+    ],
+    "chaining_clues_required": 3,
+    "chaining_dependency": "Clue 1 identifies entity A (society/person/place). Clue 2 is only resolvable using A and yields B. Clue 3 is only resolvable using B and yields the final answer. These are chaining clues, not three parallel hints."
+  },
+  "image_note": "URL-only card; use page_url for the scan."
+}

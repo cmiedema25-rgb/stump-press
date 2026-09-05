@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stump Press — chaining clues</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Stump Press</h1>
+      <p class="tag">Garbage OCR + unique local crumbs → 3 <strong>chaining</strong> clues that stump text-only AI.</p>
+    </div>
+    <p class="rules-pill">Local crumbs only · clue2 needs A from clue1 · clue3 needs B from clue2</p>
+  </header>
+
+  <main class="layout">
+    <section class="gallery" aria-label="Candidates">
+      <h2>High-junk / local-notice pages</h2>
+      <div id="list" class="cards"></div>
+    </section>
+
+    <section class="detail" aria-label="Challenge editor">
+      <div id="empty" class="empty">Pick a page. Build a dependency chain toward a tiny local fact.</div>
+      <div id="editor" class="editor hidden">
+        <div class="meta">
+          <h2 id="title"></h2>
+          <p id="meta-line" class="muted"></p>
+          <p class="links">
+            <a id="page-link" href="#" target="_blank" rel="noopener">Open page image / LOC</a>
+            <span id="crumb-hits" class="crumbs"></span>
+          </p>
+        </div>
+
+        <div class="split">
+          <div class="ocr-pane">
+            <h3>OCR excerpt (probably junk)</h3>
+            <pre id="ocr"></pre>
+            <p id="score-line" class="muted"></p>
+          </div>
+          <form id="form" class="form-pane">
+            <label>Crumb type
+              <select name="crumb_type">
+                <option value="society">society notice</option>
+                <option value="tea_party">tea party</option>
+                <option value="church_social">church social</option>
+                <option value="blotter">police blotter</option>
+                <option value="obscure_ad">obscure ad</option>
+                <option value="local_notice">other local notice</option>
+              </select>
+            </label>
+            <label>Question (stump the model)
+              <textarea name="question" rows="3" required placeholder="On what weekday/date was the tea at Masonic Hall?"></textarea>
+            </label>
+            <fieldset>
+              <legend>3 chaining clues (each depends on the previous)</legend>
+              <p class="chain-help">C1 → entity A · C2 uses A → entity B · C3 uses B → final answer. Not three parallel hints.</p>
+              <label>Clue 1 — identify entity A (society / person / place)
+                <textarea name="c1" rows="2" required placeholder="Which ladies' society placed the tea notice? (A = that society)"></textarea>
+              </label>
+              <label>Clue 2 — only resolvable using A → yields B
+                <textarea name="c2" rows="2" required placeholder="Using that society's notice: where was the tea held? (B = Masonic Hall)"></textarea>
+              </label>
+              <label>Clue 3 — only resolvable using B → yields the answer
+                <textarea name="c3" rows="2" required placeholder="Using that hall's event line: which weekday/inst. date?"></textarea>
+              </label>
+              <p id="chain-warn" class="warn hidden"></p>
+            </fieldset>
+            <label>Answer
+              <input name="answer" type="text" required placeholder="Thursday, June 12, 1884" />
+            </label>
+            <label>Why this stumps a text-only model
+              <textarea name="why_stumps_text_model" rows="3" required placeholder="Bad OCR; unique local detail; answer needs the A→B→answer chain from the scan…"></textarea>
+            </label>
+            <div class="actions">
+              <button type="submit">Save challenge JSON</button>
+              <span id="save-status" class="muted"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Public domain scans via Library of Congress Chronicling America. Be polite to LOC servers. MIT.</p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
