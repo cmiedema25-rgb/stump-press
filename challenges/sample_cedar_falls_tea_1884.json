@@ -1,0 +1,67 @@
+{
+  "id": "sample_cedar_falls_tea_1884",
+  "title": "Image 3 of The Cedar Falls gazette (Cedar Falls, Iowa), June 13, 1884",
+  "date": "1884-06-13",
+  "lccn": "sn85049551",
+  "page_url": "https://www.loc.gov/resource/sn85049551/1884-06-13/ed-1/?sp=3",
+  "image_url": null,
+  "image_urls": [],
+  "ocr_excerpt": "S0ci3ty N0t3s \u2014 Th3 L4di3s' M1ss10n4ry S0c13ty 0f th3 F1rst Pr3sbyt3r14n Chu4ch w1ll g1v3 4 t3a 4t M4s0n1c H4ll 0n Th#rsd4y 3v3n1ng 0f l4st w33k, th3 12th 1nst. M3sd4m3s H0lbr00k 4nd V4n D#s3n p0#r3d. @@@@ #### qqqq ~~~~ Illl /\\/\\/\\ rn rn rn",
+  "ocr_score": 0.82,
+  "ocr_reasons": [
+    "high_non_alnum",
+    "low_dictionary_rate",
+    "repeated_junk_chars",
+    "local_crumb_language"
+  ],
+  "ocr_metrics": {},
+  "image_stats": {},
+  "local_crumb_hits": [
+    "society",
+    "tea_party",
+    "church"
+  ],
+  "crumb_type": "tea_party",
+  "question": "On what weekday and calendar date did the tea at Masonic Hall take place?",
+  "chaining_clues": [
+    "On the society-notes column, identify which ladies' society placed the tea notice (entity A = that society).",
+    "Using that society\u2019s notice only: where did they hold the tea? (entity B = the named hall in A\u2019s notice \u2014 Masonic Hall).",
+    "Using that hall\u2019s event line from the same notice: which weekday and \u2018inst.\u2019 date does it assign to the tea at B? Combine with the issue date (June 13, 1884) to land the calendar answer."
+  ],
+  "hops": [
+    {
+      "step": 1,
+      "clue": "On the society-notes column, identify which ladies' society placed the tea notice (entity A = that society)."
+    },
+    {
+      "step": 2,
+      "clue": "Using that society\u2019s notice only: where did they hold the tea? (entity B = the named hall in A\u2019s notice \u2014 Masonic Hall)."
+    },
+    {
+      "step": 3,
+      "clue": "Using that hall\u2019s event line from the same notice: which weekday and \u2018inst.\u2019 date does it assign to the tea at B? Combine with the issue date (June 13, 1884) to land the calendar answer."
+    }
+  ],
+  "answer": "Thursday, June 12, 1884",
+  "why_stumps_text_model": "OCR is digit-substituted garbage; the tea date is a unique Cedar Falls society crumb; each clue needs the prior entity (society \u2192 hall \u2192 date).",
+  "why_model_fails": "",
+  "source": "chronicling-america",
+  "license_note": "Public domain historic newspaper page via Library of Congress Chronicling America / loc.gov. Respect LOC terms of use; do not abuse servers.",
+  "rules": {
+    "unique_local_crumb": true,
+    "prefer": [
+      "society notices",
+      "tea parties",
+      "church socials",
+      "obscure ads",
+      "minor police blotter"
+    ],
+    "avoid": [
+      "famous national events",
+      "well-known historical facts"
+    ],
+    "chaining_clues_required": 3,
+    "chaining_dependency": "Clue 1 identifies entity A (society/person/place). Clue 2 is only resolvable using A and yields B. Clue 3 is only resolvable using B and yields the final answer. These are chaining clues, not three parallel hints."
+  },
+  "image_note": "URL-only sample; open page_url on loc.gov for the public-domain scan."
+}

@@ -1,0 +1,65 @@
+{
+  "id": "sample_oswego_blotter_1879",
+  "title": "Image 2 of The Oswego daily times (Oswego, N.Y.), March 18, 1879",
+  "date": "1879-03-18",
+  "lccn": "sn83031387",
+  "page_url": "https://www.loc.gov/resource/sn83031387/1879-03-18/ed-1/?sp=2",
+  "image_url": null,
+  "image_urls": [],
+  "ocr_excerpt": "P0L1C3 \u2014 J4s. M#ll1g4n, 4 b04tman, w4s f1n3d $3 4nd c0sts f0r d1s0rd3rly c0nd#ct 0n W4t3r str33t S#nd4y n1ght. M4g1str4t3 H#bb4rd.  *** ### $$$ ^^^ ~~~ rnrnrn",
+  "ocr_score": 0.74,
+  "ocr_reasons": [
+    "elevated_non_alnum",
+    "weak_dictionary_rate",
+    "repeated_junk_chars",
+    "local_crumb_language"
+  ],
+  "ocr_metrics": {},
+  "image_stats": {},
+  "local_crumb_hits": [
+    "blotter"
+  ],
+  "crumb_type": "blotter",
+  "question": "Before which magistrate was boatman Jas. Mulligan fined, and what was the fine?",
+  "chaining_clues": [
+    "On the police blotter, identify the defendant described as a boatman (entity A = Jas. Mulligan).",
+    "Using A\u2019s blotter line: what charge and street/time context is given? (entity B = disorderly conduct on Water Street Sunday night).",
+    "From the disposition of B\u2019s case in that same line: what fine/costs and which magistrate close the notice? That is the answer."
+  ],
+  "hops": [
+    {
+      "step": 1,
+      "clue": "On the police blotter, identify the defendant described as a boatman (entity A = Jas. Mulligan)."
+    },
+    {
+      "step": 2,
+      "clue": "Using A\u2019s blotter line: what charge and street/time context is given? (entity B = disorderly conduct on Water Street Sunday night)."
+    },
+    {
+      "step": 3,
+      "clue": "From the disposition of B\u2019s case in that same line: what fine/costs and which magistrate close the notice? That is the answer."
+    }
+  ],
+  "answer": "Magistrate Hubbard; $3 and costs",
+  "why_stumps_text_model": "OCR mangling plus an obscure local blotter; must chain person \u2192 charge context \u2192 magistrate/fine from the scan.",
+  "why_model_fails": "",
+  "source": "chronicling-america",
+  "license_note": "Public domain historic newspaper page via Library of Congress Chronicling America / loc.gov. Respect LOC terms of use; do not abuse servers.",
+  "rules": {
+    "unique_local_crumb": true,
+    "prefer": [
+      "society notices",
+      "tea parties",
+      "church socials",
+      "obscure ads",
+      "minor police blotter"
+    ],
+    "avoid": [
+      "famous national events",
+      "well-known historical facts"
+    ],
+    "chaining_clues_required": 3,
+    "chaining_dependency": "Clue 1 identifies entity A (society/person/place). Clue 2 is only resolvable using A and yields B. Clue 3 is only resolvable using B and yields the final answer. These are chaining clues, not three parallel hints."
+  },
+  "image_note": "Synthetic OCR fixture; page_url is the real LOC resource."
+}

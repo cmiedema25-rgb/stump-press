@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.venv/
+venv/
+data/hunt_index.json
+data/*_thumb.*
+challenges/*_thumb.*
+!challenges/sample_*.json
+!challenges/_schema_stub.json
+*.jp2
+.DS_Store
+
+# Keep sample fixtures; ignore live hunt cards
+challenges/*.json
+!challenges/sample_*.json
+!challenges/_schema_stub.json

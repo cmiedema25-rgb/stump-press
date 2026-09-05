@@ -1,0 +1,57 @@
+{
+  "id": "_schema_stub",
+  "title": "Empty chaining-clue stub",
+  "date": "",
+  "lccn": "",
+  "page_url": "",
+  "image_url": null,
+  "image_urls": [],
+  "ocr_excerpt": "",
+  "ocr_score": 0.0,
+  "ocr_reasons": [],
+  "ocr_metrics": {},
+  "image_stats": {},
+  "local_crumb_hits": [],
+  "crumb_type": "local_notice",
+  "question": "",
+  "chaining_clues": [
+    "",
+    "",
+    ""
+  ],
+  "hops": [
+    {
+      "step": 1,
+      "clue": ""
+    },
+    {
+      "step": 2,
+      "clue": ""
+    },
+    {
+      "step": 3,
+      "clue": ""
+    }
+  ],
+  "answer": "",
+  "why_stumps_text_model": "",
+  "why_model_fails": "",
+  "source": "chronicling-america",
+  "license_note": "Public domain historic newspaper page via Library of Congress Chronicling America / loc.gov. Respect LOC terms of use; do not abuse servers.",
+  "rules": {
+    "unique_local_crumb": true,
+    "prefer": [
+      "society notices",
+      "tea parties",
+      "church socials",
+      "obscure ads",
+      "minor police blotter"
+    ],
+    "avoid": [
+      "famous national events",
+      "well-known historical facts"
+    ],
+    "chaining_clues_required": 3,
+    "chaining_dependency": "Clue 1 identifies entity A (society/person/place). Clue 2 is only resolvable using A and yields B. Clue 3 is only resolvable using B and yields the final answer. These are chaining clues, not three parallel hints."
+  }
+}
